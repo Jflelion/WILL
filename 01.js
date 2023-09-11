@@ -1,20 +1,18 @@
-/* 
-  Importante: 
-  No modificar ni el nombre ni los argumetos que reciben las funciones, sólo deben escribir
-  código dentro de las funciones ya definidas. 
-  No comentar la funcion 
-*/
 function soloNumeros(array) {
-  // La funcion llamada 'soloNumeros' recibe como argumento un arreglo de enteros y strings llamado 'array'.
-  // Debe devolver un arreglo con solo los enteros.
-  // Ej: 
-  // soloNumeros([1, 'Henry', 2]) debe retornar [1, 2]
+  // Inicializamos un arreglo vacío para almacenar los números
+  var numeros = [];
 
-  // Tu código aca:
+  // Recorremos el arreglo de entrada
+  for (var i = 0; i < array.length; i++) {
+    // Verificamos si el elemento es un número
+    if (typeof array[i] === 'number') {
+      // Si es un número, lo agregamos al arreglo 'numeros'
+      numeros.push(array[i]);
+    }
+  }
 
+  // Retornamos el arreglo 'numeros' que contiene solo números
+  return numeros;
 }
 
-// No modifiques nada debajo de esta linea //
-
-
-module.exports = soloNumeros
+module.exports = soloNumeros;
